@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 97vh;
+            flex-direction: column;
+            animation: color 9s infinite linear;
+        }
+        @keyframes color {
+            0%   { background: #000000; }
+            20%  { background: #393939; }
+            40%  { background: #000000; }
+            60%  { background: #9e9e9e; }
+            80%  { background: #484848; }
+            100% { background: #000000; }
+        }
+        h1 , h2{
+            text-align: center;
+            height: 8vh;
+            font-size: 130px;
+            color: white;
+            font-style: oblique;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: uppercase;
+            user-select: none;
+        }
+        h2{
+            font-size: 66px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1></h1>
+    <h2></h2>
+
+    <script>
+
+        let flag = ''
+
+        let _oclock = new Date();
+        let _Day = _oclock.getDay();
+        let _Hours = _oclock.getHours();
+        let _Minutes = _oclock.getMinutes();
+        let _Seconds = _oclock.getSeconds();
+        document.getElementsByTagName('h1')[0].innerHTML = `${_Day}:${_Hours}:${_Minutes}:${_Seconds}`
+       
+        if(_Hours >= 6 && _Hours <=12){
+            flag = 'good morning'
+        }else if(_Hours >= 12 && _Hours <= 18){
+            flag = 'good afternoon'
+        }else if(_Hours >= 18 && _Hours <= 23){
+            flag = 'good night'
+        }
+        document.getElementsByTagName('h2')[0].innerHTML = flag
+
+        setInterval( function oclock(){
+            let _oclock = new Date();
+            let _Day = _oclock.getDay();
+            let _Hours = _oclock.getHours();
+            let _Minutes = _oclock.getMinutes();
+            let _Seconds = _oclock.getSeconds();
+
+            document.getElementsByTagName('h1')[0].innerHTML = `${_Day}:${_Hours}:${_Minutes}:${_Seconds}`
+        }, 1000);
+
+        
+
+
+    </script>
+</body>
+</html>

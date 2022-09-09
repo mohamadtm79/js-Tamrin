@@ -1,0 +1,113 @@
+main{
+    height: 100vh;
+    >.modal{
+        width: 43%;
+        height: 67%;
+        background: #000000ab;
+        position: absolute;
+        color: #fff;
+        top: 15%;
+        left: 28.4%;
+        display: none;
+        // display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        >button{
+            border: 0;
+            outline: 0;
+            width: 31%;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    >div{
+        width: 41%;
+        height: 10%;
+        background-color: black;
+        font-size: 51px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >div:nth-of-type(1){
+            width: 33%;
+            color: #fff;
+            height: 73px;
+            background: black;
+        }
+        >div:nth-of-type(2){
+            width: 14%;
+            color: #fff;
+            height: 76px;
+            background-color: rgb(26 26 26);
+            margin-top: 11px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 28px;
+            line-height: 2.6;
+        }
+        >div:nth-of-type(3){
+            width: 27%;
+            color: #fff;
+            height: 76px;
+            background: rgb(238, 255, 0);
+            margin-top: 11px;
+            font-size: 28px;
+            line-height: 2.6;
+        }
+    }
+    >section{
+        user-select: none;
+        width: 41%;
+        position: relative;
+        height: 90%;
+        #button{
+            width: 22%;
+            height: 35px;
+            background-color: #ffffff;
+            position: absolute;
+            bottom: 1%;
+            left: 39%;
+            font-size: 25px;
+            transform: none;
+            text-align: center;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            cursor: pointer;
+            &::after{
+                content: none;
+            }
+        }
+        >div{
+            width: 22%;
+            height: 120px;
+            transform-origin: top;
+            transform: translateZ(55px) rotateY(178deg);
+            position: relative;
+            transform-style: preserve-3d;
+            &:hover{
+                outline: 1px solid #fff;
+            }
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: rgb(26 26 26);
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateZ(-1px);
+            }
+            >img{
+                width: 100%;
+                height: inherit;
+            }
+        }
+    }
+}
